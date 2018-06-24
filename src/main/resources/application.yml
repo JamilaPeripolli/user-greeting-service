@@ -3,7 +3,7 @@ spring:
     name: user-greeting-service
 
 server:
-  port: 8081
+  port: 9090
 
 eureka:
   client:
@@ -19,6 +19,5 @@ app:
 greeting-service:
   ribbon:
     eureka:
-      enabled: false
-    listOfServers: localhost:8080, localhost:8181
+      enabled: true
     ServerListRefreshInterval: 15000
