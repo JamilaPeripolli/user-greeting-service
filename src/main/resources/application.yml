@@ -3,7 +3,7 @@ spring:
     name: user-greeting-service
 
 server:
-  port: 8081
+  port: 9090
 
 eureka:
   client:
