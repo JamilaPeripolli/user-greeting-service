@@ -1,8 +1,10 @@
 package com.jps.example.usergreetingservice.consumer;
 
+import com.jps.example.usergreetingservice.config.RibbonConfig;
 import com.jps.example.usergreetingservice.service.EurekaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
@@ -28,8 +30,8 @@ public class GreetingConsumer {
     }
 
     public String getRandomGreeting() {
-        URI uri = eurekaService.getInstance(greetingServiceId);
-        String greeting = restTemplate.getForObject(uri.toString() + greetingEndpointUri, String.class);
+//        URI uri = eurekaService.getInstance(greetingServiceId);
+        String greeting = restTemplate.getForObject("http://greeting-service" + greetingEndpointUri, String.class);
         return greeting;
     }
 }
