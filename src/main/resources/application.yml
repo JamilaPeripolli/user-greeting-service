@@ -15,3 +15,10 @@ app:
     serviceId: greeting-service
     endpoint:
       greeting: /greeting
+
+greeting-service:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:8080, localhost:8181
+    ServerListRefreshInterval: 15000
