@@ -1,12 +1,13 @@
 package com.jps.example.usergreetingservice.config;
 
 import com.netflix.client.config.IClientConfig;
-import com.netflix.loadbalancer.*;
+import com.netflix.loadbalancer.IPing;
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.NoOpPing;
+import com.netflix.loadbalancer.RoundRobinRule;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
-@Configuration
 public class RibbonConfig {
 
     @Autowired
