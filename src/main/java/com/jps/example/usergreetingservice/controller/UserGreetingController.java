@@ -1,6 +1,5 @@
 package com.jps.example.usergreetingservice.controller;
 
-import com.jps.example.usergreetingservice.consumer.GreetingConsumer;
 import com.jps.example.usergreetingservice.service.UserGreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
